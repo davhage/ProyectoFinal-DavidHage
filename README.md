@@ -1,8 +1,20 @@
-# React + Vite
+# eCommerce React Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es un eCommerce que estoy desarrollando como parte del curso de React en Coder House. El objetivo del proyecto es construir una tienda en línea funcional utilizando React para la lógica de la aplicación y Chakra UI para los estilos y componentes de la interfaz de usuario.
 
-Currently, two official plugins are available:
+Tecnologías Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+React: Una biblioteca de JavaScript para construir interfaces de usuario.
+Chakra UI: Un framework de componentes de UI simple y modular que me permite construir interfaces de manera rápida y fácil.
+Estructura del Proyecto
+
+El proyecto sigue una estructura de carpetas estándar de React. Actualmente, el desarrollo se ha centrado en la creación de la barra de navegación (NavBar), que es el primer componente clave de la aplicación.
+
+Componentes Actuales
+NavBar: Componente de navegación principal que contiene tres subcomponentes:
+Logo: Muestra el logotipo de la tienda.
+CarWidget: Un ícono de carrito de compras.
+ItemListContainer: Un componente que despliega un mensaje de bienvenida para los usuarios.
+Estado Actual del Proyecto
+
+Hasta el momento, he completado la implementación básica de la NavBar con los componentes mencionados. El siguiente paso será agregar más funcionalidades, como la integración de productos, manejo de estados y rutas, y la creación de páginas adicionales para el eCommerce.
