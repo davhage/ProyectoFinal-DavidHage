@@ -18,6 +18,7 @@ import { MoonIcon, SunIcon } from '@chakra-ui/icons'
 import CarWidget from '../CarWidget/CarWidget';
 import logo from '../../../src/assets/logo.png'
 import palm from '../../../src/assets/palm.png'
+import Username from '../Username/Username';
 
 const Navbar = () => {
     const { colorMode, toggleColorMode } = useColorMode()
@@ -63,9 +64,7 @@ const Navbar = () => {
                 />
               </Center>
               <br />
-              <Center>
-                <p>Username</p>
-              </Center>
+              <Username name={'David'} />
               <br />
               <MenuDivider />
               <MenuItem>Your Servers</MenuItem>
