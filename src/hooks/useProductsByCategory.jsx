@@ -7,10 +7,10 @@ export const useProductsByCategory = (id) => {
   React.useEffect(() => {
     getProductsByCategory(id)
       .then((response) => {
-        setProducts(response.data);
+        setProducts(response.data.products);
       })
       .catch((error) => {
-        console.error(error);
+        console.log(error);
       });
   }, [id]);
 

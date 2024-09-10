@@ -2,13 +2,13 @@ import React from 'react';
 import { getProductById } from '../services/products.service';
 
 export const useProductById = (id) => {
-  const [products, setProducts] = React.useState({});
+  const [product, setProduct] = React.useState({});
   const [loading, setLoading] = React.useState(true);
 
   React.useEffect(() => {
     getProductById(id)
       .then((response) => {
-        setProducts(response.data);
+        setProduct(response.data);
       })
       .catch((error) => {
         console.error(error);
@@ -17,5 +17,5 @@ export const useProductById = (id) => {
         setLoading(false);
       });
   }, []);
-  return { products, loading };
+  return { product, loading };
 };
