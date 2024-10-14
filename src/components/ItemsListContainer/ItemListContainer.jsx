@@ -7,14 +7,15 @@ import {
   Divider,
   CardFooter,
   ButtonGroup,
-  Button,
   Image,
   Text,
 } from '@chakra-ui/react';
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 export const ItemListContainer = ({ products }) => {
-  return (
+  return products.length === 0 ? (
+    <Box>Nothing to see here</Box>
+  ) : (
     <Box display={'flex'} flexWrap={'wrap'}>
       {products.map((product) => (
         <Card key={product.id} maxW='sm' margin={'1rem'}>
@@ -35,10 +36,10 @@ export const ItemListContainer = ({ products }) => {
           <Divider />
           <CardFooter>
             <ButtonGroup spacing='2'>
-              {/* <Button variant="ghost" colorScheme="blue">
-                  Add to cart
-                </Button> */}
-              <Link to={`/item/${product.id}`}>Ir a Detalle</Link>
+              <Link to={`/item/${product.id}`}>
+                {' '}
+                Product details{' '}
+              </Link>
             </ButtonGroup>
           </CardFooter>
         </Card>

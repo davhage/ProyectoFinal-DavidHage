@@ -15,7 +15,7 @@ import {
   Image,
 } from '@chakra-ui/react';
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
-import { CarWidget } from '../CarWidget';
+import { CartWidget } from '../CartWidget';
 import { Link } from 'react-router-dom';
 import { useCategory } from '../../hooks';
 
@@ -24,7 +24,7 @@ import palm from '../../../src/assets/palm.png';
 
 export const Navbar = () => {
   const { colorMode, toggleColorMode } = useColorMode();
-  const { category } = useCategory();
+  const { category } = useCategory('categories');
   return (
     <>
       <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
@@ -45,7 +45,7 @@ export const Navbar = () => {
             <MenuButton as={Link} cursor="pointer" style={{ marginLeft: 30 }}>
               Categories
             </MenuButton>
-            <MenuList height={"300px"} overflowY={"scroll"}>
+            <MenuList height={"160px"} overflowY={"scroll"}>
               {category.map((category) => (
                 <MenuItem key={category.slug}>
                   <Link to={`/category/${category.slug}`}>{category.name}</Link>
@@ -55,7 +55,7 @@ export const Navbar = () => {
           </Menu>
           <Flex alignItems={'center'}>
             <Stack direction={'row'} spacing={7}>
-              <CarWidget />
+              <CartWidget />
               <Button onClick={toggleColorMode}>
                 {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
               </Button>

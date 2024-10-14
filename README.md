@@ -13,7 +13,7 @@ El proyecto sigue una estructura de carpetas estándar de React. Actualmente, el
 ## Componentes Actuales
 * *NavBar:* Componente de navegación principal que contiene tres subcomponentes:
 * *Logo:* Muestra el logotipo de la tienda.
-* *CarWidget:* Un ícono de carrito de compras.
+* *CartWidget:* Un ícono de carrito de compras.
 * *ItemListContainer:* Un componente que despliega un mensaje de bienvenida para los usuarios.
 ## Estado Actual del Proyecto
 
